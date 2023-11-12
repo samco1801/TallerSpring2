@@ -1,0 +1,67 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<link rel="stylesheet" href="" />
+	<title>Tus Calificaciones</title>
+</h:head>
+<h:body>
+	<h1>Vas pasando??</h1>
+	<div class="image-container"></div>
+	<div class="layout-wrapper">
+		<h:form>
+			<h3>Ingresa tu nombre:</h3>
+
+			<div class="ui-float-label">
+				<p:outputLabel class="ui-float-label" />
+				<p:inputText value="#{AdminBean.name}" class="form-control"
+					type="text" placeholder="Nombre" />
+			</div>
+			<h3>Nota de primer corte:</h3>
+
+			<div class="ui-float-label">
+				<p:outputLabel class="ui-float-label" />
+				<p:inputText value="#{AdminBean.name}" class="form-control"
+					type="text" placeholder="Nota 1" />
+			</div>
+
+		</h:form>
+		<h3>Nota del segundo corte:</h3>
+
+		<div class="ui-float-label">
+			<p:outputLabel class="ui-float-label" />
+			<p:inputText value="#{AdminBean.name}" class="form-control"
+				type="text" placeholder="Nota 2" />
+		</div>
+		<h3>Nota del tercer corte:</h3>
+
+		<div class="ui-float-label">
+			<p:outputLabel class="ui-float-label" />
+			<p:inputText value="#{AdminBean.name}" class="form-control"
+				type="text" placeholder="Nota 3" />
+		</div>
+		<div class="p-button-container">
+			<p:commandButton class="p-button" value="Crear"
+				action="#{AdminBean.saveScore}" update="outputc"
+				styleClass="p-button-secondary" />
+		</div>
+		<h3>Promedio:</h3>
+
+		<div class="ui-float-label">
+			<p:outputLabel class="ui-float-label" />
+			<p:inputText value="#{AdminBean.name}" class="form-control"
+				type="text" placeholder="Promedio" />
+		</div>
+		<div class="p-button-container">
+			<p:commandButton class="p-button" value="Mostrar"
+				action="#{AdminBean.showAll}" update="outputmos"
+				styleClass="p-button-secondary" />
+		</div>
+	</div>
+</h:body>
+</html>
